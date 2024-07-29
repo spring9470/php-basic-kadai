@@ -14,9 +14,11 @@
       private $name;
       private $price;
       // メゾットを定義する
-      public function show_price(int $price){
-        $this->price = $price;
-        echo '<br>'.$this->price;
+      // public function show_price(int $price){
+      public function show_price(){
+        return $this->price;
+        // $this->price = $price;
+        // echo '<br>'.$this->price;
       }
       // コンストラクタを定義する
       public function __construct(string $name,int $price){
@@ -31,9 +33,11 @@
       private $height;
       private $weight;
       // メゾットと定義する
-      public function show_height(int $height){
-        $this->height = $height;
-        echo '<br>'.$this->height;
+      public function show_height(){
+        return $this->height;
+      // public function show_height(int $height){
+        // $this->height = $height;
+        // echo '<br>'.$this->height;
       }
       // コンストラクタを定義する
       public function __construct(string $name,int $height,int $weight){
@@ -52,9 +56,12 @@
     // インスタンス$animalの各プロパティの値を出力する
     print_r($animal);
 
+    echo $food->show_price().'<br>';
+    echo $animal->show_height().'<br>';
+
     // メゾットにアクセスして実行する
-    $food->show_price(250);
-    $animal->show_height(60);
+    // $food->show_price(250);
+    // $animal->show_height(60);
     ?>
   </p>
   
